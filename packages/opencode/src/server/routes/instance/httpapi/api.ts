@@ -18,6 +18,7 @@ import { QuestionApi } from "./groups/question"
 import { SessionApi } from "./groups/session"
 import { SyncApi } from "./groups/sync"
 import { TuiApi } from "./groups/tui"
+import { V2Api } from "./v2"
 import { WorkspaceApi } from "./groups/workspace"
 
 // SSE event schemas built from the same BusEvent/SyncEvent registries that
@@ -41,6 +42,7 @@ export const InstanceHttpApi = HttpApi.make("opencode-instance")
   .addHttpApi(SessionApi)
   .addHttpApi(SyncApi)
   .addHttpApi(TuiApi)
+  .addHttpApi(V2Api)
   .addHttpApi(WorkspaceApi)
 
 export const OpenCodeHttpApi = HttpApi.make("opencode")
